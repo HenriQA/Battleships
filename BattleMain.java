@@ -53,7 +53,7 @@ public class BattleMain {
 		
 		//Place Ship 5
 	
-		/**
+		
 		while(console.placeShip(3,console.getBoardPlayerOne()) == false){
 			console.placeShip(3,console.getBoardPlayerOne());
 		}
@@ -61,9 +61,9 @@ public class BattleMain {
 		while(console.placeShip(3,console.getBoardPlayerTwo()) == false){
 				console.placeShip(3,console.getBoardPlayerTwo());
 		}
-		**/
+		
 		//Place Ship 6
-		/**
+		
 
 		while(console.placeShip(4,console.getBoardPlayerOne()) == false){
 			console.placeShip(4,console.getBoardPlayerOne());
@@ -72,9 +72,9 @@ public class BattleMain {
 		while(console.placeShip(4,console.getBoardPlayerTwo()) == false){
 				console.placeShip(4,console.getBoardPlayerTwo());
 		}
-		**/
+		
 		//Place Ship 7
-		/**
+		
 		while(console.placeShip(5,console.getBoardPlayerOne()) == false){
 			console.placeShip(5,console.getBoardPlayerOne());
 		}
@@ -82,7 +82,7 @@ public class BattleMain {
 		while(console.placeShip(5,console.getBoardPlayerTwo()) == false){
 				console.placeShip(5,console.getBoardPlayerTwo());
 		}
-		**/
+		
 		//FIRE
 		System.out.println("All ships placed. Now FIRE!!!");
 		
