@@ -1,0 +1,32 @@
+public void showBoard(int boardSize, Boolean isGame, Square[][] player){
+	for (int i=0; i<boardSize;i++){
+		System.out.print(“ _”);
+	}
+	System.out.print(“\n”);
+
+	for(int j=0; j<boardSize; j++){
+		for(int k=0; k<boardSize), k++){
+			if (isGame == true)
+				showSquare(j,k,player);
+			else
+				showShips(j,k,player);
+		}
+		System.out.print(“|\n”);
+	}
+}
+
+public String showSquare(int i,int j, Square[][] player){
+	if(player[i][j].isHit==true && player[i][j].isEmpty==true){
+		System.out.print(“|O”);
+	else if(player[i][j].isHit=true && player[i][j].isEmpty=false){
+		System.out.print(“|X”);
+	else
+		System.out.print(“|_”);
+}
+
+public String showShips(int row, int column, Square[][] player){
+	if(player[i][j].isEmpty==false)
+		System.out.print(“|S”);
+	else
+		System.out.print(“|_”);
+}

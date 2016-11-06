@@ -4,18 +4,24 @@ import java.util.Scanner;
 public class BattleMain {
 
 	public static void main(String[] args) {
+		System.out.println("Weclome to BATTLESHIPS! \n");
+		
+		
 		//Create Console
 		BattleConsole console = new BattleConsole("Console v.01");
 		
 		//*Do Stuff with the console*
 		
+		console.showBoard(12,true,console.getBoardPlayerOne());
 		//Place Ship 1
 		
 		while(console.placeShip(2,console.getBoardPlayerOne()) == false){
+			console.showBoard(12,true,console.getBoardPlayerOne());
 			console.placeShip(2,console.getBoardPlayerOne());
 		}
 				
 		while(console.placeShip(2,console.getBoardPlayerTwo()) == false){
+				console.showBoard(12,true,console.getBoardPlayerTwo());
 				console.placeShip(2,console.getBoardPlayerTwo());
 		}
 		

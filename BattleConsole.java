@@ -15,7 +15,7 @@ public class BattleConsole {
 	public BattleConsole(String consoleName) {
 		
 		this.consoleName = consoleName;
-		this.boardSize = 8;
+		this.boardSize = 12;
 		this.boardPlayerOne = new Square[boardSize][boardSize];
 		for(int i = 0; i<boardSize; i++){
 			for(int j = 0; j<boardSize; j++){
@@ -234,4 +234,37 @@ public boolean placeShipRight(int shipSize, Square[][] player){
 	public Square[][] getBoardPlayerTwo() {
 		return boardPlayerTwo;
 	}
+
+	//Methods for printing board
+public void showBoard(int boardSize, Boolean isGame, Square[][] player){
+        for (int i=0; i<boardSize;i++){
+                System.out.print(" _");
+        }
+        System.out.print("\n");
+        for(int j=0; j<boardSize; j++){
+                for(int k=0; k<boardSize;k++) {
+                        if (isGame == true)
+                                showSquare(j,k,player);
+                        else
+                                showShips(j,k,player);
+                }
+                System.out.print("|\n");
+        }
+}
+public void showSquare(int r,int c, Square[][] playera){
+        if(playera[r][c].getIsHit()==true && playera[r][c].getIsEmpty()==true){
+                System.out.print("|O");
+	}
+        else if(playera[r][c].getIsHit()==true && playera[r][c].getIsEmpty()==false){
+                System.out.print("|X");
+        }
+	else
+                System.out.print("|_");
+}
+public void showShips(int r, int c, Square[][] playerb){
+        if(playerb[r][c].getIsEmpty()==false)
+                System.out.print("|S");
+        else
+                System.out.print("|_");
+}
 }
