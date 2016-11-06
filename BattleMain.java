@@ -16,23 +16,25 @@ public class BattleMain {
 		//Place Ship 1
 		
 		while(console.placeShip(2,console.getBoardPlayerOne()) == false){
-			console.showBoard(12,true,console.getBoardPlayerOne());
+			console.showBoard(12,false,console.getBoardPlayerOne());
 			console.placeShip(2,console.getBoardPlayerOne());
 		}
 				
 		while(console.placeShip(2,console.getBoardPlayerTwo()) == false){
-				console.showBoard(12,true,console.getBoardPlayerTwo());
+				console.showBoard(12,false,console.getBoardPlayerTwo());
 				console.placeShip(2,console.getBoardPlayerTwo());
 		}
 		
 		//Place Ship 2
 		
 		while(console.placeShip(2,console.getBoardPlayerOne()) == false){
+			onsole.showBoard(12,false,console.getBoardPlayerOne());
 			console.placeShip(2,console.getBoardPlayerOne());
 		}
 				
 		while(console.placeShip(2,console.getBoardPlayerTwo()) == false){
-				console.placeShip(2,console.getBoardPlayerTwo());
+			console.showBoard(12,false,console.getBoardPlayerTwo());
+			console.placeShip(2,console.getBoardPlayerTwo());
 		}
 		
 		
@@ -40,20 +42,24 @@ public class BattleMain {
 		//Place Ship 3
 		
 		while(console.placeShip(3,console.getBoardPlayerOne()) == false){
+			onsole.showBoard(12,false,console.getBoardPlayerOne());
 			console.placeShip(3,console.getBoardPlayerOne());
 		}
 				
 		while(console.placeShip(3,console.getBoardPlayerTwo()) == false){
+			console.showBoard(12,false,console.getBoardPlayerTwo());
 				console.placeShip(3,console.getBoardPlayerTwo());
 		}
 	
 		//Place Ship 4
 
 		while(console.placeShip(3,console.getBoardPlayerOne()) == false){
+			onsole.showBoard(12,false,console.getBoardPlayerOne());
 			console.placeShip(3,console.getBoardPlayerOne());
 		}
 				
 		while(console.placeShip(3,console.getBoardPlayerTwo()) == false){
+			console.showBoard(12,false,console.getBoardPlayerTwo());
 				console.placeShip(3,console.getBoardPlayerTwo());
 		}
 		
@@ -61,10 +67,12 @@ public class BattleMain {
 	
 		
 		while(console.placeShip(3,console.getBoardPlayerOne()) == false){
+			onsole.showBoard(12,false,console.getBoardPlayerOne());
 			console.placeShip(3,console.getBoardPlayerOne());
 		}
 				
 		while(console.placeShip(3,console.getBoardPlayerTwo()) == false){
+			console.showBoard(12,false,console.getBoardPlayerTwo());
 				console.placeShip(3,console.getBoardPlayerTwo());
 		}
 		
@@ -72,20 +80,24 @@ public class BattleMain {
 		
 
 		while(console.placeShip(4,console.getBoardPlayerOne()) == false){
+			onsole.showBoard(12,false,console.getBoardPlayerOne());
 			console.placeShip(4,console.getBoardPlayerOne());
 		}
 				
 		while(console.placeShip(4,console.getBoardPlayerTwo()) == false){
-				console.placeShip(4,console.getBoardPlayerTwo());
+			console.showBoard(12,false,console.getBoardPlayerTwo());
+			console.placeShip(4,console.getBoardPlayerTwo());
 		}
 		
 		//Place Ship 7
 		
 		while(console.placeShip(5,console.getBoardPlayerOne()) == false){
+			onsole.showBoard(12,false,console.getBoardPlayerOne());
 			console.placeShip(5,console.getBoardPlayerOne());
 		}
 				
 		while(console.placeShip(5,console.getBoardPlayerTwo()) == false){
+			console.showBoard(12,false,console.getBoardPlayerTwo());
 				console.placeShip(5,console.getBoardPlayerTwo());
 		}
 		
@@ -97,6 +109,7 @@ public class BattleMain {
 		while(gameOver == false){
 			//Player one shoot
 			System.out.println("Player 1 fire!!!");
+			console.showBoard(12,true,console.getBoardPlayerTwo());
 			console.fire(console.getBoardPlayerTwo());
 			if (console.isGameEnd(console.getBoardPlayerTwo()) == true){
 				System.out.println("Player 1 wins!");
@@ -105,6 +118,7 @@ public class BattleMain {
 			}
 			//Player two shoot
 			System.out.println("Player 2 fire!!!");
+			console.showBoard(12,false,console.getBoardPlayerOne());
 			console.fire(console.getBoardPlayerOne());
 			if (console.isGameEnd(console.getBoardPlayerOne()) == true){
 				System.out.println("Player 2 wins!");
