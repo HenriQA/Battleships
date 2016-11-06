@@ -28,7 +28,7 @@ public class BattleMain {
 		//Place Ship 2
 		
 		while(console.placeShip(2,console.getBoardPlayerOne()) == false){
-			onsole.showBoard(12,false,console.getBoardPlayerOne());
+			console.showBoard(12,false,console.getBoardPlayerOne());
 			console.placeShip(2,console.getBoardPlayerOne());
 		}
 				
@@ -42,7 +42,7 @@ public class BattleMain {
 		//Place Ship 3
 		
 		while(console.placeShip(3,console.getBoardPlayerOne()) == false){
-			onsole.showBoard(12,false,console.getBoardPlayerOne());
+			console.showBoard(12,false,console.getBoardPlayerOne());
 			console.placeShip(3,console.getBoardPlayerOne());
 		}
 				
@@ -54,7 +54,7 @@ public class BattleMain {
 		//Place Ship 4
 
 		while(console.placeShip(3,console.getBoardPlayerOne()) == false){
-			onsole.showBoard(12,false,console.getBoardPlayerOne());
+			console.showBoard(12,false,console.getBoardPlayerOne());
 			console.placeShip(3,console.getBoardPlayerOne());
 		}
 				
@@ -67,7 +67,7 @@ public class BattleMain {
 	
 		
 		while(console.placeShip(3,console.getBoardPlayerOne()) == false){
-			onsole.showBoard(12,false,console.getBoardPlayerOne());
+			console.showBoard(12,false,console.getBoardPlayerOne());
 			console.placeShip(3,console.getBoardPlayerOne());
 		}
 				
@@ -80,7 +80,7 @@ public class BattleMain {
 		
 
 		while(console.placeShip(4,console.getBoardPlayerOne()) == false){
-			onsole.showBoard(12,false,console.getBoardPlayerOne());
+			console.showBoard(12,false,console.getBoardPlayerOne());
 			console.placeShip(4,console.getBoardPlayerOne());
 		}
 				
@@ -92,7 +92,7 @@ public class BattleMain {
 		//Place Ship 7
 		
 		while(console.placeShip(5,console.getBoardPlayerOne()) == false){
-			onsole.showBoard(12,false,console.getBoardPlayerOne());
+			console.showBoard(12,false,console.getBoardPlayerOne());
 			console.placeShip(5,console.getBoardPlayerOne());
 		}
 				
