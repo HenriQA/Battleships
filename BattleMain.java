@@ -13,23 +13,19 @@ public class BattleMain {
 		//*Do Stuff with the console*
 		
 		//Place Ship 1
-		console.showBoard(12,false,console.getBoardPlayerOne());
 		while(console.placeShip(2,console.getBoardPlayerOne()) == false){
 			
 		console.placeShip(2,console.getBoardPlayerOne());
 		}
-		console.showBoard(12,false,console.getBoardPlayerTwo());
 		while(console.placeShip(2,console.getBoardPlayerTwo()) == false){
 				
 		console.placeShip(2,console.getBoardPlayerTwo());
 		}
 		//Place Ship 2
-		console.showBoard(12,false,console.getBoardPlayerOne());
 		while(console.placeShip(2,console.getBoardPlayerOne()) == false){
 			
 		console.placeShip(2,console.getBoardPlayerOne());
 		}
-		console.showBoard(12,false,console.getBoardPlayerTwo());
 		while(console.placeShip(2,console.getBoardPlayerTwo()) == false){
 			
 		console.placeShip(2,console.getBoardPlayerTwo());
@@ -38,24 +34,20 @@ public class BattleMain {
 		
 		
 		//Place Ship 3
-		console.showBoard(12,false,console.getBoardPlayerOne());
 		while(console.placeShip(3,console.getBoardPlayerOne()) == false){
 			
 		console.placeShip(3,console.getBoardPlayerOne());
 		}
-		console.showBoard(12,false,console.getBoardPlayerTwo());
 		while(console.placeShip(3,console.getBoardPlayerTwo()) == false){
 			
 		console.placeShip(3,console.getBoardPlayerTwo());
 		}
 	
 		//Place Ship 4
-		console.showBoard(12,false,console.getBoardPlayerOne());
 		while(console.placeShip(3,console.getBoardPlayerOne()) == false){
 			
 		console.placeShip(3,console.getBoardPlayerOne());
 		}
-		console.showBoard(12,false,console.getBoardPlayerTwo());
 		while(console.placeShip(3,console.getBoardPlayerTwo()) == false){
 			
 		console.placeShip(3,console.getBoardPlayerTwo());
@@ -63,37 +55,31 @@ public class BattleMain {
 		
 		//Place Ship 5
 	
-		console.showBoard(12,false,console.getBoardPlayerOne());
 		while(console.placeShip(3,console.getBoardPlayerOne()) == false){
 			
 		console.placeShip(3,console.getBoardPlayerOne());
 		}
-		console.showBoard(12,false,console.getBoardPlayerTwo());
 		while(console.placeShip(3,console.getBoardPlayerTwo()) == false){
 			
 		console.placeShip(3,console.getBoardPlayerTwo());
 		}
 		
 		//Place Ship 6
-		console.showBoard(12,false,console.getBoardPlayerOne());
 
 		while(console.placeShip(4,console.getBoardPlayerOne()) == false){
 			
 		console.placeShip(4,console.getBoardPlayerOne());
 		}
-		console.showBoard(12,false,console.getBoardPlayerTwo());
 		while(console.placeShip(4,console.getBoardPlayerTwo()) == false){
 			
 		console.placeShip(4,console.getBoardPlayerTwo());
 		}
 		
 		//Place Ship 7
-		console.showBoard(12,false,console.getBoardPlayerOne());
 		while(console.placeShip(5,console.getBoardPlayerOne()) == false){
 			
 		console.placeShip(5,console.getBoardPlayerOne());
 		}
-		console.showBoard(12,false,console.getBoardPlayerTwo());
 		while(console.placeShip(5,console.getBoardPlayerTwo()) == false){
 			
 		console.placeShip(5,console.getBoardPlayerTwo());
