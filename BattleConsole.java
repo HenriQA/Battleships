@@ -92,7 +92,7 @@ public class BattleConsole {
 		//Check that the ship can be placed legally
 		boolean available = true;
 		
-		if((a>)||(a<0)||(b>player.length-1)||(b<0)){
+		if((a>player.length-1)||(a<0)||(b>player.length-1)||(b<0)){
 			System.out.println("You must place the ship on the board!");
 			return available;
 		}
