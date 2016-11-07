@@ -132,9 +132,11 @@ public boolean placeShipRight(int shipSize, Square[][] player){
 		
 		//Take read input to place the ship on the board
 		if(player == boardPlayerOne){
+			showBoard(player.length,false,getBoardPlayerOne());
 			System.out.println("Player 1, where would you like to place your ship (of size " + shipSize + ") on the board.");
 		}
 		else {
+			showBoard(player.length,false,getBoardPlayerTwo());
 			System.out.println("Player 2, where would you like to place your ship (of size " + shipSize + ") on the board.");
 		}
 		
