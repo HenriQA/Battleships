@@ -242,7 +242,7 @@ public void showBoard(int boardSize, Boolean isGame, Square[][] player){
         }
         System.out.print("\n");
         for(int j=boardSize-1; j>=0; j--){
-                for(int k=0; k<boardSize;k++) {
+		for(int k=0; k<boardSize;k++) {
                         if (isGame == true)
                                 showSquare(j,k,player);
                         else
