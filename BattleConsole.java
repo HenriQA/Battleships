@@ -55,6 +55,8 @@ public class BattleConsole {
 				placeShipRight(shipSize, player);
 				reader1.nextLine();
 				return true;
+			//case ("left"):
+			//case ("down"):
 			default:
 				System.out.println("Not a valid direction, please enter up or right");
 				reader1.nextLine();
@@ -71,9 +73,11 @@ public class BattleConsole {
 		
 		//Take reade input to place the ship on the board
 		if(player == boardPlayerOne){
+			showBoard(player.length,false,getBoardPlayerOne());
 			System.out.println("Player 1, where would you like to place your ship (of size " + shipSize + ") on the board.");
 		}
 		else {
+			showBoard(player.length,false,getBoardPlayerTwo());
 			System.out.println("Player 2, where would you like to place your ship (of size " + shipSize + ") on the board.");
 		}
 		
@@ -88,7 +92,7 @@ public class BattleConsole {
 		//Check that the ship can be placed legally
 		boolean available = true;
 		
-		if((a>player.length-1)||(a<0)||(b>player.length-1)||(b<0)){
+		if((a>)||(a<0)||(b>player.length-1)||(b<0)){
 			System.out.println("You must place the ship on the board!");
 			return available;
 		}
@@ -236,36 +240,36 @@ public boolean placeShipRight(int shipSize, Square[][] player){
 	}
 
 	//Methods for printing board
-public void showBoard(int boardSize, Boolean isGame, Square[][] player){
-        for (int i=0; i<boardSize;i++){
-                System.out.print(" _");
-        }
-        System.out.print("\n");
-        for(int j=boardSize-1; j>=0; j--){
-		for(int k=0; k<boardSize;k++) {
-                        if (isGame == true)
-                                showSquare(j,k,player);
-                        else
-                                showShips(j,k,player);
-                }
-                System.out.print("|  " + j + "\n");
-        }
-System.out.println(" 0 1 2 3 4 5 6 7 8 9 1011");
-}
-public void showSquare(int c,int r, Square[][] playera){
-        if(playera[r][c].getIsHit()==true && playera[r][c].getIsEmpty()==true){
-                System.out.print("|O");
+	public void showBoard(int boardSize, Boolean isGame, Square[][] player){
+        	for (int i=0; i<boardSize;i++){
+                	System.out.print(" _");
+        	}
+        	System.out.print("\n");
+        	for(int j=boardSize-1; j>=0; j--){
+			for(int k=0; k<boardSize;k++) {
+                        	if (isGame == true)
+                                	showSquare(j,k,player);
+                        	else
+                                	showShips(j,k,player);
+                	}
+                	System.out.print("|  " + j + "\n");
+        	}
+		System.out.println(" 0 1 2 3 4 5 6 7 8 9 1011");
 	}
-        else if(playera[r][c].getIsHit()==true && playera[r][c].getIsEmpty()==false){
-                System.out.print("|X");
-        }
-	else
-                System.out.print("|_");
-}
-public void showShips(int c, int r, Square[][] playerb){
-        if(playerb[r][c].getIsEmpty()==false)
-                System.out.print("|S");
-        else
-                System.out.print("|_");
-}
+	public void showSquare(int c,int r, Square[][] playera){
+        	if(playera[r][c].getIsHit()==true && playera[r][c].getIsEmpty()==true){
+                	System.out.print("|O");
+		}
+        	else if(playera[r][c].getIsHit()==true && playera[r][c].getIsEmpty()==false){
+                	System.out.print("|X");
+        	}
+		else
+                	System.out.print("|_");
+	}
+	public void showShips(int c, int r, Square[][] playerb){
+        	if(playerb[r][c].getIsEmpty()==false)
+                	System.out.print("|S");
+        	else
+                	System.out.print("|_");
+	}
 }
