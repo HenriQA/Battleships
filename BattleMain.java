@@ -118,7 +118,7 @@ console.showBoard(12,false,console.getBoardPlayerOne());
 			}
 			//Player two shoot
 			System.out.println("Player 2 fire!!!");
-			console.showBoard(12,false,console.getBoardPlayerOne());
+			console.showBoard(12,true,console.getBoardPlayerOne());
 			console.fire(console.getBoardPlayerOne());
 			if (console.isGameEnd(console.getBoardPlayerOne()) == true){
 				System.out.println("Player 2 wins!");

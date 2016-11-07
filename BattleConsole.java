@@ -241,17 +241,18 @@ public void showBoard(int boardSize, Boolean isGame, Square[][] player){
                 System.out.print(" _");
         }
         System.out.print("\n");
-        for(int j=0; j<boardSize; j++){
+        for(int j=boardSize-1; j>=0; j--){
                 for(int k=0; k<boardSize;k++) {
                         if (isGame == true)
                                 showSquare(j,k,player);
                         else
                                 showShips(j,k,player);
                 }
-                System.out.print("|\n");
+                System.out.print("|  " + j + "\n");
         }
+System.out.println(" 0 1 2 3 4 5 6 7 8 9 1011");
 }
-public void showSquare(int r,int c, Square[][] playera){
+public void showSquare(int c,int r, Square[][] playera){
         if(playera[r][c].getIsHit()==true && playera[r][c].getIsEmpty()==true){
                 System.out.print("|O");
 	}
@@ -261,7 +262,7 @@ public void showSquare(int r,int c, Square[][] playera){
 	else
                 System.out.print("|_");
 }
-public void showShips(int r, int c, Square[][] playerb){
+public void showShips(int c, int r, Square[][] playerb){
         if(playerb[r][c].getIsEmpty()==false)
                 System.out.print("|S");
         else
