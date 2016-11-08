@@ -35,156 +35,107 @@ public class BattleConsole {
 	
 	//Place Method
 	
-	public boolean placeShip(int shipSize,  Square[][] player){
-		if(player == boardPlayerOne){
-			System.out.println("Player 1, please enter the direction you want your ship to be placed (up) or (right).");
-		}
-		else {
-			System.out.println("Player 2, please enter the direction you want your ship to be placed (up) or (right)");
-		}
-		Scanner reader1 = new Scanner(System.in);
-		String direction = reader1.next();
-		//reader1.close();
-		switch(direction){
-	
-			case ("up"):
-				placeShipUp(shipSize, player);
-				reader1.nextLine();
-				return true;
-			case ("right"):
-				placeShipRight(shipSize, player);
-				reader1.nextLine();
-				return true;
-			//case ("left"):
-			//case ("down"):
-			default:
-				System.out.println("Not a valid direction, please enter up or right");
-				reader1.nextLine();
-				return false;
-				
-		}
-		
-		
-	}
-	
-	//Methods for placing ships
-	//Up
-	public boolean placeShipUp(int shipSize, Square[][] player){
+	public boolean placeShip(int shipSize, Square[][] player, direction){
 		
 		//Take reade input to place the ship on the board
-		if(player == boardPlayerOne){
-			showBoard(player.length,false,getBoardPlayerOne());
-			System.out.println("Player 1, where would you like to place your ship (of size " + shipSize + ") on the board.");
-		}
-		else {
-			showBoard(player.length,false,getBoardPlayerTwo());
-			System.out.println("Player 2, where would you like to place your ship (of size " + shipSize + ") on the board.");
-		}
-		
-		Scanner reader = new Scanner(System.in);
-		
-		String coord = reader.next();
-		List<String> coordSplit = Arrays.asList(coord.split(","));
-		int a = Integer.parseInt(coordSplit.get(0));
-		int b = Integer.parseInt(coordSplit.get(1));
-		
-		
-		//Check that the ship can be placed legally
-		boolean available = true;
-		
-		if((a>player.length-1)||(a<0)||(b>player.length-1)||(b<0)){
-			System.out.println("You must place the ship on the board!");
-			return available;
-		}
-		
-		
-		if(player.length < (b+shipSize)){
-			System.out.println("The ship cannot be placed here, please try somewhere else.");
-			return available;
-		}
-		
-		
-		for(int i = 0; i<shipSize; i++){
-			if(player[a][b+i].getIsEmpty() == false){
-				available = false;
-			}
-		}
-		
-		
-		for(int k = 0; k<shipSize; k++){
-			if(available == false){
-				System.out.println("This ship can't be placed here, it would overlap with another ship.");
-				return available;
-			}
-			else {
-				player[a][b+k].setIsEmpty(false);
-				
-			}
-		}
-		if (available == true){
-			System.out.println("Ship placed successfully at ("+ a + "," + b + ") pointing up.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-		}
-		return available;
+	if(player == boardPlayerOne){
+		showBoard(player.length,false,getBoardPlayerOne());
+		System.out.println("Player 1, where would you like to place your ship (of size " + shipSize + ") on the board.");
 	}
+	else {
+		showBoard(player.length,false,getBoardPlayerTwo());
+		System.out.println("Player 2, where would you like to place your ship (of size " + shipSize + ") on the board.");
+	}
+		
+	Scanner reader = new Scanner(System.in);
+	//Get direction
+	System.out.println("Please enter the direction you will place the ship ('up', 'down', 'left' or 'right').");
+	boolean isDirection = false;
 	
-	//Right
-public boolean placeShipRight(int shipSize, Square[][] player){
-		
-		//Take read input to place the ship on the board
-		if(player == boardPlayerOne){
-			showBoard(player.length,false,getBoardPlayerOne());
-			System.out.println("Player 1, where would you like to place your ship (of size " + shipSize + ") on the board.");
+	while(isDirection == false){
+		String direction = reader.next();
+		if (direction.equals(up) || direction.equals(down) || direction.equals(left) || direction.equals(right)){
+			isDirection = true;
 		}
-		else {
-			showBoard(player.length,false,getBoardPlayerTwo());
-			System.out.println("Player 2, where would you like to place your ship (of size " + shipSize + ") on the board.");
+		else{
+			isDirection = false;
+			System.out.println("This is not a valid direction, please enter another");
 		}
+	} 
 		
-		Scanner reader = new Scanner(System.in);
-		
-		String coord = reader.next();
-		List<String> coordSplit = Arrays.asList(coord.split(","));
-		int a = Integer.parseInt(coordSplit.get(0));
-		int b = Integer.parseInt(coordSplit.get(1));
-		
-		//reader.close();
-		//Check that the ship can be placed legally
-		boolean available = true;
-		
-		if((a>player.length-1)||(a<0)||(b>player.length-1)||(b<0)){
-			System.out.println("You must place the ship on the board!");
-			return available;
-		}
-		
-		
-		if(player.length < (a+shipSize)){
-			System.out.println("The ship cannot be placed here, please try somewhere else.");
-			return available;
+	// Get coordinates
+	boolean isPossibleCoord = false;
+	
+	while(isPossibleCoord == false){
+		//Row
+		System.out.println("Please enter the row you will place the ship.");	
+		boolean isRow = false;
+		while(isRow == false){
+			String a = reader.next();
+			for (j=0; j<player.length; j++){
+				if(a == j){
+					isRow = true;
+					break;
+				}
+			}
+			if(isRow == false){
+				System.out.println("This row does not appear on the board, please enter another.");
+			}
 		}
 		
+		//Column
+		String b;
+		System.out.println("Please enter the column you will place the ship.");
+		boolean isColumn = false;
+		while(isColumn == false){
+			String b = reader.next();
+			for (j=0; j<player.length; j++){
+				if(b == j){
+					isColumn = true;
+					break;
+				}
+			}
+			if(isColumn == false){
+				System.out.println("This column does not appear on the board, please enter another.");
+			}
+		}
 		
 		for(int i = 0; i<shipSize; i++){
-			if(player[a+i][b].getIsEmpty() == false){
-				available = false;
+			if(direction == up && player[a][b+i].getIsEmpty() == true){
+				isPossibleCoord = false;
+			}
+			else if(direction == right && player[a+i][b].getIsEmpty() == true){
+				isPossibleCoord = true;
+			}
+			else if(direction == down && player[a][b-i].getIsEmpty() == true){
+				isPossibleCoord = true;
+			}
+			else if (direction == left && player[a-i][b].getIsEmpty() == true){
+				isPossibleCoord = true;
 			}
 		}
-		
-		
-		for(int k = 0; k<shipSize; k++){
-			if(available == false){
-				System.out.println("This ship can't be placed here, it would overlap with another ship.");
-				return available;
-			}
-			else {
-				player[a+k][b].setIsEmpty(false);
-				
-			}
+		if(isPossibleCoord == false){
+			System.out.println("The ship cannot be placed here, it will overlap with another");
 		}
-		if (available == true){
-			System.out.println("Ship placed successfully at ("+ a + "," + b + ") pointing right.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+	} 		
+	//Place the ship
+	for(int k=0; k<shipSize; k++){
+		System.out.println("Your ship has been placed successfully at " + a + "," + b + " pointing " + direction + ".\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+		if(direction == up){
+			player[a][b+k].setIsEmpty(false);
 		}
-		return available;
+		else if(direction == down){
+			player[a][b-k].setIsEmpty(false);
+		}
+		else if(direction == right){
+			player[a+k][b].setIsEmpty(false);
+		}
+		else if(direction == left){
+			player[a][b+k].setIsEmpty(false);
+		}
 	}
+			
+}
 	//...
 	
 	//fire Returns NoShip if square is empty. Returns Hit! if square is not empty. 
