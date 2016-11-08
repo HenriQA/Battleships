@@ -35,7 +35,7 @@ public class BattleConsole {
 	
 	//Place Method
 	
-	public boolean placeShip(int shipSize, Square[][] player, direction){
+	public boolean placeShip(int shipSize, Square[][] player){
 		
 		//Take reade input to place the ship on the board
 	if(player == boardPlayerOne){
