@@ -174,7 +174,7 @@ public class BattleConsole {
 	//Returns item hit already if isHit is true
 	
 	//firing method
-	public void fire(Square[][] player){
+	public boolean fire(Square[][] player){
 		Scanner reader = new Scanner(System.in);
 		String coord;
 		while(!reader.hasNext("\\d+,\\d+")) {
@@ -185,23 +185,26 @@ public class BattleConsole {
 		List<String> coordSplit = Arrays.asList(coord.split(","));
 		int a = Integer.parseInt(coordSplit.get(0));
 		int b = Integer.parseInt(coordSplit.get(1));
-		
-		if((a>player.length-1)||(a<0)||(b>player.length-1)||(b<0)){
-			System.out.println("You must fire at the board!");
-			return;
+		while(true){
+			if((a>player.length-1)||(a<0)||(b>player.length-1)||(b<0)){
+				System.out.println("You must fire at the board!");
+				continue;
+			}
+			if(player[a][b].getIsHit() == true){
+				System.out.println("You have already fired at this square!");
+				return false;
+			}
+			else if(player[a][b].isEmpty == true){
+				System.out.println("This square does not contain a ship.");
+				player[a][b].setIsHit(true);
+				return false;
+			}
+			else {
+				System.out.println("Ship Hit!!!");
+				player[a][b].setIsHit(true);
+				return true;
+			}
 		}
-		if(player[a][b].getIsHit() == true){
-			System.out.println("You have already fired at this square!");
-		}
-		else if(player[a][b].isEmpty == true){
-			System.out.println("This square does not contain a ship.");
-			player[a][b].setIsHit(true);
-		}
-		else {
-			System.out.println("Ship Hit!!!");
-			player[a][b].setIsHit(true);
-		}
-		
 	}
 	
 	//Method for checking if all ships are hit!
