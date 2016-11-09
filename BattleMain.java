@@ -11,13 +11,16 @@ public class BattleMain {
 		BattleConsole console = new BattleConsole("Console v.01");
 		
 		//*Do Stuff with the console*
-		
+		Scanner reader = new Scanner(System.in);
 		//Place Ship 1	
+		
 		console.placeShip(2,console.getBoardPlayerOne());
-		//console.placeShip(2,console.getBoardPlayerTwo());
+		System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Player 2, please press enter");
+		String wait = scanner.nextln()
+		console.placeShip(2,console.getBoardPlayerTwo());
 		//Place Ship 2
 		console.placeShip(2,console.getBoardPlayerOne());
-		//console.placeShip(2,console.getBoardPlayerTwo());
+		console.placeShip(2,console.getBoardPlayerTwo());
 		//Place Ship 3
 		console.placeShip(3,console.getBoardPlayerOne());
 		console.placeShip(3,console.getBoardPlayerTwo());
