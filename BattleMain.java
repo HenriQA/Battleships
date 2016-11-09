@@ -81,8 +81,9 @@ public class BattleMain {
 			console.showBoard(true,console.getBoardPlayerTwo());
 			boolean hit = false;
 			while (hit = false){
-				hit = (console.fire(console.getBoardPlayerTwo()));
 				System.out.println("Here I am");
+				hit = (console.fire(console.getBoardPlayerTwo()));
+				
 				if (console.isGameEnd(console.getBoardPlayerTwo()) == true){
 					System.out.println("Player 1 wins!");
 					wait = reader.next();
