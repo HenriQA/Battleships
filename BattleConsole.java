@@ -160,7 +160,7 @@ public class BattleConsole {
 	public void fire(Square[][] player){
 		Scanner reader = new Scanner(System.in);
 		
-		Pattern c = Pattern.compile("[0-9],[0-9]");
+		Pattern c = Pattern.compile("a*b");
 		String coord;
 		while (!reader.hasNext(Pattern c)) {
 			System.out.println("These are not in the valid format");
