@@ -108,8 +108,12 @@ public class BattleConsole {
 			}
 			isPossibleCoord = true;
 			for(int i = 0; i<shipSize; i++){
-				if(direction.equals("up") && player[a][b+i].getIsEmpty() == false){
-					isPossibleCoord = false;
+				if(direction.equals("up")){
+					if(b+shipSize > player.length){
+						isPossibleCoord = false;
+				   	else if(player[a][b+i].getIsEmpty() == false){
+						isPossibleCoord = false;
+					}
 				}
 				else if(direction.equals("right") && player[a+i][b].getIsEmpty() == false){
 					isPossibleCoord = false;
