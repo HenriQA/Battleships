@@ -80,8 +80,7 @@ public class BattleMain {
 			System.out.println("Player 1 fire!!!");
 			console.showBoard(true,console.getBoardPlayerTwo());
 			boolean hit = false;
-			while (hit = false){
-				System.out.println("Here I am");
+			while (hit == false){
 				hit = (console.fire(console.getBoardPlayerTwo()));
 				
 				if (console.isGameEnd(console.getBoardPlayerTwo()) == true){
