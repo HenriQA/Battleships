@@ -35,7 +35,7 @@ public class BattleConsole {
 	
 	//Place Method
 	
-	public boolean placeShip(int shipSize, Square[][] player){
+	public void placeShip(int shipSize, Square[][] player){
 		
 		//Take reade input to place the ship on the board
 		if(player == boardPlayerOne){
@@ -62,7 +62,6 @@ public class BattleConsole {
 				isDirection = false;
 				System.out.println("This is not a valid direction, please enter another");
 			}
-			return false;
 		} 
 		
 		// Get coordinates
@@ -86,7 +85,6 @@ public class BattleConsole {
 				if(isRow == false){
 					System.out.println("This row does not appear on the board, please enter another.");
 				}
-				return false;
 			}
 		
 			//Column
@@ -105,7 +103,6 @@ public class BattleConsole {
 				if(isColumn == false){
 					System.out.println("This column does not appear on the board, please enter another.");
 				}
-				return false;
 			}
 		
 			for(int i = 0; i<shipSize; i++){
@@ -142,7 +139,6 @@ public class BattleConsole {
 				player[a][b+k].setIsEmpty(false);
 			}
 		}
-		return false;
 	}
 	//...
 	
