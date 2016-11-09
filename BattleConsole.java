@@ -137,7 +137,7 @@ public class BattleConsole {
 				player[a+k][b].setIsEmpty(false);
 			}
 			else if(direction.equals("left")){
-				player[a][b+k].setIsEmpty(false);
+				player[a-k][b].setIsEmpty(false);
 			}
 		}
 	}
