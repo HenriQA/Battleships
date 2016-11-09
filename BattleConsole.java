@@ -80,7 +80,7 @@ public class BattleConsole {
 			int b = Integer.parseInt(coordSplit.get(1));			
 			
 			//Error checking
-			for(int i=0; i<shipSize; i++)
+			for(int i=0; i<shipSize; i++){
 				if(a<0 || a >player.length || b<0 || b>player.length){
 					System.out.println("This coordinate does not lie on the board");
 				}
