@@ -13,16 +13,15 @@ public class BattleMain {
 		//*Do Stuff with the console*
 		Scanner reader = new Scanner(System.in);
 		StringBuilder sb = new StringBuilder();
-		sb.append("Now it's the other players turn");
 		for(int i = 0; i<100; i++){
-			sb.append("`\n...");
+			sb.append("\n");
 		}
-		//sb.append("Ship Placed Successfully! \n\n Type any character to continue (and press enter)");
+		sb.append("Ship Placed Successfully! \n\n Type any character to continue (and press enter)");
 		String message = sb.toString();
 		//Place Ship 1	
 		
 		console.placeShip(2,console.getBoardPlayerOne());
-		System.out.println(" Ship Placed Successfully! \n\n Type any character to continue (and press enter)");
+		System.out.println(message);
 		String wait = reader.next();
 		console.placeShip(2,console.getBoardPlayerTwo());
 		System.out.println(message);
