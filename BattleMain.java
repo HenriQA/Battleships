@@ -82,6 +82,7 @@ public class BattleMain {
 			boolean hit = false;
 			while (hit = false){
 				hit = (console.fire(console.getBoardPlayerTwo()));
+				System.out.println("Here I am");
 				if (console.isGameEnd(console.getBoardPlayerTwo()) == true){
 					System.out.println("Player 1 wins!");
 					wait = reader.next();
