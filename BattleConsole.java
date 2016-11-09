@@ -49,7 +49,7 @@ public class BattleConsole {
 		
 		Scanner reader = new Scanner(System.in);
 		//Get direction
-		String direction = "";
+		String direction;
 		System.out.println("Please enter the direction you will place the ship ('up', 'down', 'left' or 'right').");
 		boolean isDirection = false;
 	
@@ -58,6 +58,7 @@ public class BattleConsole {
 			if (localDirection.equals("up") || localDirection.equals("down") || localDirection.equals("left") || localDirection.equals("right")){
 				direction = localDirection;
 				isDirection = true;
+				break;
 			}
 			else{
 				isDirection = false;
