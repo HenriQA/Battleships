@@ -13,7 +13,7 @@ public class BattleMain {
 		//*Do Stuff with the console*
 		Scanner reader = new Scanner(System.in);
 		StringBuilder stringBuild = new StringBuilder();
-		int i =;
+		int i = 0;
 		while(i<100){
 			stringBuild.append(" \n");
 			i++;
