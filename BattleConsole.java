@@ -99,7 +99,7 @@ public class BattleConsole {
 				isPossibleCoord = true;
 			}
 			else{
-				break;
+				continue;
 			}
 			
 		
