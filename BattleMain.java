@@ -12,78 +12,27 @@ public class BattleMain {
 		
 		//*Do Stuff with the console*
 		
-		//Place Ship 1
-		while(console.placeShip(2,console.getBoardPlayerOne()) == false){
-			
+		//Place Ship 1	
 		console.placeShip(2,console.getBoardPlayerOne());
-		}
-		while(console.placeShip(2,console.getBoardPlayerTwo()) == false){
-				
 		console.placeShip(2,console.getBoardPlayerTwo());
-		}
 		//Place Ship 2
-		while(console.placeShip(2,console.getBoardPlayerOne()) == false){
-			
 		console.placeShip(2,console.getBoardPlayerOne());
-		}
-		while(console.placeShip(2,console.getBoardPlayerTwo()) == false){
-			
 		console.placeShip(2,console.getBoardPlayerTwo());
-		}
-		
-		
-		
 		//Place Ship 3
-		while(console.placeShip(3,console.getBoardPlayerOne()) == false){
-			
 		console.placeShip(3,console.getBoardPlayerOne());
-		}
-		while(console.placeShip(3,console.getBoardPlayerTwo()) == false){
-			
 		console.placeShip(3,console.getBoardPlayerTwo());
-		}
-	
 		//Place Ship 4
-		while(console.placeShip(3,console.getBoardPlayerOne()) == false){
-			
 		console.placeShip(3,console.getBoardPlayerOne());
-		}
-		while(console.placeShip(3,console.getBoardPlayerTwo()) == false){
-			
 		console.placeShip(3,console.getBoardPlayerTwo());
-		}
-		
 		//Place Ship 5
-	
-		while(console.placeShip(3,console.getBoardPlayerOne()) == false){
-			
 		console.placeShip(3,console.getBoardPlayerOne());
-		}
-		while(console.placeShip(3,console.getBoardPlayerTwo()) == false){
-			
 		console.placeShip(3,console.getBoardPlayerTwo());
-		}
-		
 		//Place Ship 6
-
-		while(console.placeShip(4,console.getBoardPlayerOne()) == false){
-			
 		console.placeShip(4,console.getBoardPlayerOne());
-		}
-		while(console.placeShip(4,console.getBoardPlayerTwo()) == false){
-			
 		console.placeShip(4,console.getBoardPlayerTwo());
-		}
-		
 		//Place Ship 7
-		while(console.placeShip(5,console.getBoardPlayerOne()) == false){
-			
 		console.placeShip(5,console.getBoardPlayerOne());
-		}
-		while(console.placeShip(5,console.getBoardPlayerTwo()) == false){
-			
 		console.placeShip(5,console.getBoardPlayerTwo());
-		}
 		
 		//FIRE
 		System.out.println("All ships placed. Now FIRE!!!");
