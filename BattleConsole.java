@@ -106,6 +106,8 @@ public class BattleConsole {
 					isPossibleCoord = true;
 				}
 			}
+			else
+				return;
 		
 			for(int i = 0; i<shipSize; i++){
 				if(direction.equals("up")){
