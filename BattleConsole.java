@@ -38,108 +38,108 @@ public class BattleConsole {
 	public boolean placeShip(int shipSize, Square[][] player){
 		
 		//Take reade input to place the ship on the board
-	if(player == boardPlayerOne){
-		showBoard(player.length,false,getBoardPlayerOne());
-		System.out.println("Player 1, where would you like to place your ship (of size " + shipSize + ") on the board.");
-	}
-	else {
-		showBoard(player.length,false,getBoardPlayerTwo());
-		System.out.println("Player 2, where would you like to place your ship (of size " + shipSize + ") on the board.");
-	}
+		if(player == boardPlayerOne){
+			showBoard(player.length,false,getBoardPlayerOne());
+			System.out.println("Player 1, where would you like to place your ship (of size " + shipSize + ") on the board.");
+		}
+		else {
+			showBoard(player.length,false,getBoardPlayerTwo());
+			System.out.println("Player 2, where would you like to place your ship (of size " + shipSize + ") on the board.");
+		}
 		
-	Scanner reader = new Scanner(System.in);
-	//Get direction
-	String direction = "";
-	System.out.println("Please enter the direction you will place the ship ('up', 'down', 'left' or 'right').");
-	boolean isDirection = false;
+		Scanner reader = new Scanner(System.in);
+		//Get direction
+		String direction = "";
+		System.out.println("Please enter the direction you will place the ship ('up', 'down', 'left' or 'right').");
+		boolean isDirection = false;
 	
-	while(isDirection == false){
-		direction = reader.next();
-		if (direction.equals("up") || direction.equals("down") || direction.equals("left") || direction.equals("right")){
-			isDirection = true;
-		}
-		else{
-			isDirection = false;
-			System.out.println("This is not a valid direction, please enter another");
-		}
-	} 
+		while(isDirection == false){
+			direction = reader.next();
+			if (direction.equals("up") || direction.equals("down") || direction.equals("left") || direction.equals("right")){
+				isDirection = true;
+			}
+			else{
+				isDirection = false;
+				System.out.println("This is not a valid direction, please enter another");
+			}
+		} 
 		
-	// Get coordinates
-	boolean isPossibleCoord = false;
-	int a = 0;
-	int b = 0;
-	while(isPossibleCoord == false){
-		//Row
-		int A;
-		System.out.println("Please enter the row you will place the ship.");	
-		boolean isRow = false;
-		while(isRow == false){
-			A = reader.nextInt();
-			for (int j=0; j<player.length; j++){
-				if(A == j){
-					isRow = true;
-					a = A;
-					break;
+		// Get coordinates
+		boolean isPossibleCoord = false;
+		int a = 0;
+		int b = 0;
+		while(isPossibleCoord == false){
+			//Row
+			int A;
+			System.out.println("Please enter the row you will place the ship.");	
+			boolean isRow = false;
+			while(isRow == false){
+				A = reader.nextInt();
+				for (int j=0; j<player.length; j++){
+					if(A == j){
+						isRow = true;
+						a = A;
+						break;
+					}
+				}
+				if(isRow == false){
+					System.out.println("This row does not appear on the board, please enter another.");
 				}
 			}
-			if(isRow == false){
-				System.out.println("This row does not appear on the board, please enter another.");
-			}
-		}
 		
-		//Column
-		int B;
-		System.out.println("Please enter the column you will place the ship.");
-		boolean isColumn = false;
-		while(isColumn == false){
-			B = reader.nextInt();
-			for (int j=0; j<player.length; j++){
-				if(B == j){
-					isColumn = true;
-					b = B;
-					break;
+			//Column
+			int B;
+			System.out.println("Please enter the column you will place the ship.");
+			boolean isColumn = false;
+			while(isColumn == false){
+				B = reader.nextInt();
+				for (int j=0; j<player.length; j++){
+					if(B == j){
+						isColumn = true;
+						b = B;
+						break;
+					}
+				}
+				if(isColumn == false){
+					System.out.println("This column does not appear on the board, please enter another.");
 				}
 			}
-			if(isColumn == false){
-				System.out.println("This column does not appear on the board, please enter another.");
-			}
-		}
 		
-		for(int i = 0; i<shipSize; i++){
-			if(direction == "up" && player[a][b+i].getIsEmpty() == true){
-				isPossibleCoord = false;
+			for(int i = 0; i<shipSize; i++){
+				if(direction == "up" && player[a][b+i].getIsEmpty() == true){
+					isPossibleCoord = false;
+				}
+				else if(direction == "right" && player[a+i][b].getIsEmpty() == true){
+					isPossibleCoord = true;
+				}
+				else if(direction == "down" && player[a][b-i].getIsEmpty() == true){
+					isPossibleCoord = true;
+				}
+				else if (direction == "left" && player[a-i][b].getIsEmpty() == true){
+					isPossibleCoord = true;
+				}
 			}
-			else if(direction == "right" && player[a+i][b].getIsEmpty() == true){
-				isPossibleCoord = true;
+			if(isPossibleCoord == false){
+				System.out.println("The ship cannot be placed here, it will overlap with another");
 			}
-			else if(direction == "down" && player[a][b-i].getIsEmpty() == true){
-				isPossibleCoord = true;
+		} 	
+		//Place the ship
+		for(int k=0; k<shipSize; k++){
+			System.out.println("Your ship has been placed successfully at " + a + "," + b + " pointing " + direction + ".\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+			if(direction == "up"){
+				player[a][b+k].setIsEmpty(false);
 			}
-			else if (direction == "left" && player[a-i][b].getIsEmpty() == true){
-				isPossibleCoord = true;
+			else if(direction == "down"){
+				player[a][b-k].setIsEmpty(false);
 			}
-		}
-		if(isPossibleCoord == false){
-			System.out.println("The ship cannot be placed here, it will overlap with another");
-		}
-	} 	
-	//Place the ship
-	for(int k=0; k<shipSize; k++){
-		System.out.println("Your ship has been placed successfully at " + a + "," + b + " pointing " + direction + ".\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-		if(direction == "up"){
-			player[a][b+k].setIsEmpty(false);
-		}
-		else if(direction == "down"){
-			player[a][b-k].setIsEmpty(false);
-		}
-		else if(direction == "right"){
-			player[a+k][b].setIsEmpty(false);
-		}
-		else if(direction == "left"){
-			player[a][b+k].setIsEmpty(false);
+			else if(direction == "right"){
+				player[a+k][b].setIsEmpty(false);
+			}
+			else if(direction == "left"){
+				player[a][b+k].setIsEmpty(false);
+			}
 		}
 	}
-
 	//...
 	
 	//fire Returns NoShip if square is empty. Returns Hit! if square is not empty. 
