@@ -54,8 +54,9 @@ public class BattleConsole {
 		boolean isDirection = false;
 	
 		while(isDirection == false){
-			direction = reader.next();
-			if (direction.equals("up") || direction.equals("down") || direction.equals("left") || direction.equals("right")){
+			DIRECTION = reader.next();
+			if (DIRECTION.equals("up") || DIRECTION.equals("down") || DIRECTION.equals("left") || DIRECTION.equals("right")){
+				direction = DIRECTION;
 				isDirection = true;
 			}
 			else{
@@ -129,7 +130,6 @@ public class BattleConsole {
 		for(int k=0; k<shipSize; k++){
 			if(direction == "up"){
 				player[a][b+k].setIsEmpty(false);
-				System.out.println("YAY!!!");
 			}
 			else if(direction == "down"){
 				player[a][b-k].setIsEmpty(false);
