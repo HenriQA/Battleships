@@ -220,8 +220,9 @@ public class BattleConsole {
         	else if(playera[r][c].getIsHit()==true && playera[r][c].getIsEmpty()==false){
                 	System.out.print("|X");
         	}
-		else
+		else {
                 	System.out.print("|_");
+		}
 	}
 	public void showShips(int c, int r, Square[][] playerb){
         	if(playerb[r][c].getIsEmpty()==false)
@@ -229,4 +230,4 @@ public class BattleConsole {
         	else
                 	System.out.print("|_");
 	}
-}
+//}
