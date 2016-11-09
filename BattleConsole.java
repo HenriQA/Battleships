@@ -15,7 +15,7 @@ public class BattleConsole {
 	public BattleConsole(String consoleName) {
 		
 		this.consoleName = consoleName;
-		this.boardSize = 12;
+		this.boardSize = 10;
 		this.boardPlayerOne = new Square[boardSize][boardSize];
 		for(int i = 0; i<boardSize; i++){
 			for(int j = 0; j<boardSize; j++){
@@ -220,7 +220,7 @@ public class BattleConsole {
                 	}
                 	System.out.print("|  " + j + "\n");
         	}
-		System.out.println(" 0 1 2 3 4 5 6 7 8 9 1011");
+		System.out.println(" 0 1 2 3 4 5 6 7 8 9");
 	}
 	public void showSquare(int c,int r, Square[][] playera){
         	if(playera[r][c].getIsHit()==true && playera[r][c].getIsEmpty()==true){
