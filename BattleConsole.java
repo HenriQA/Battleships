@@ -177,15 +177,15 @@ public class BattleConsole {
 	public boolean fire(Square[][] player){
 		Scanner reader = new Scanner(System.in);
 		String coord;
-		while(!reader.hasNext("\\d+,\\d+")) {
-			System.out.println("These are not in the valid format");
-    			reader.next(); 
-		}
-		coord = reader.next();
-		List<String> coordSplit = Arrays.asList(coord.split(","));
-		int a = Integer.parseInt(coordSplit.get(0));
-		int b = Integer.parseInt(coordSplit.get(1));
 		while(true){
+			while(!reader.hasNext("\\d+,\\d+")) {
+				System.out.println("These are not in the valid format");
+    				reader.next(); 
+			}
+			coord = reader.next();
+			List<String> coordSplit = Arrays.asList(coord.split(","));
+			int a = Integer.parseInt(coordSplit.get(0));
+			int b = Integer.parseInt(coordSplit.get(1));
 			if((a>player.length-1)||(a<0)||(b>player.length-1)||(b<0)){
 				System.out.println("You must fire at the board!");
 				continue;
