@@ -72,7 +72,7 @@ public class BattleConsole {
 		int b = 0;
 		while(isPossibleCoord == false){
 			String coord;
-			System.out.println("Please enter the coordinates you'd like your ship to be placed")
+			System.out.println("Please enter the coordinates you'd like your ship to be placed");
 			while(!reader.hasNext("[0-9],[0-9]")) {
 				System.out.println("Please enter coordinates");
     				reader.next(); 
