@@ -70,7 +70,7 @@ public class BattleMain {
 		while(gameOver == false){
 			//Player one shoot
 			System.out.println("Player 1 fire!!!");
-			console.showBoard(console.player.length,true,console.getBoardPlayerTwo());
+			console.showBoard(true,console.getBoardPlayerTwo());
 			console.fire(console.getBoardPlayerTwo());
 			if (console.isGameEnd(console.getBoardPlayerTwo()) == true){
 				System.out.println("Player 1 wins!");
@@ -81,12 +81,12 @@ public class BattleMain {
 			}
 			//Player two shoot
 			System.out.println("Player 2 fire!!!");
-			console.showBoard(console.player.length,true,console.getBoardPlayerOne());
+			console.showBoard(true,console.getBoardPlayerOne());
 			console.fire(console.getBoardPlayerOne());
 			if (console.isGameEnd(console.getBoardPlayerOne()) == true){
 				System.out.println("Player 2 wins!");
 				wait = reader.next();
-				console.showBoard(console.player.length, false, console.getBoardPlayerOne());
+				console.showBoard(false, console.getBoardPlayerOne());
 				gameOver = true;	
 			}
 		}	
