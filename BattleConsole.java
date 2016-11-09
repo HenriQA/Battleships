@@ -124,8 +124,9 @@ public class BattleConsole {
 			}
 		} 	
 		//Place the ship
+		
+		System.out.println("Your ship has been placed successfully at " + a + "," + b + " pointing " + direction + ".\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 		for(int k=0; k<shipSize; k++){
-			System.out.println("Your ship has been placed successfully at " + a + "," + b + " pointing " + direction + ".\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 			if(direction == "up"){
 				player[a][b+k].setIsEmpty(false);
 			}
