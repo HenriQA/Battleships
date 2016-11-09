@@ -54,9 +54,9 @@ public class BattleConsole {
 		boolean isDirection = false;
 	
 		while(isDirection == false){
-			DIRECTION = reader.next();
-			if (DIRECTION.equals("up") || DIRECTION.equals("down") || DIRECTION.equals("left") || DIRECTION.equals("right")){
-				direction = DIRECTION;
+			String localDirection = reader.next();
+			if (localDirection.equals("up") || localDirection.equals("down") || localDirection.equals("left") || localDirection.equals("right")){
+				direction = localDirection;
 				isDirection = true;
 			}
 			else{
