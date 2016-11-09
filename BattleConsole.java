@@ -162,11 +162,11 @@ public class BattleConsole {
 		
 		Pattern c = Pattern.compile("[0-9],[0-9]");
 		String coord;
-		while (!sc.hasNext(Pattern c)) {
+		while (!reader.hasNext(Pattern c)) {
 			System.out.println("These are not in the valid format");
-    			sc.next(); 
+    			reader.next(); 
 		}
-		coord = sc.next();
+		coord = reader.next();
 		List<String> coordSplit = Arrays.asList(coord.split(","));
 		int a = Integer.parseInt(coordSplit.get(0));
 		int b = Integer.parseInt(coordSplit.get(1));
