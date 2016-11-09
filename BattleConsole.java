@@ -71,6 +71,25 @@ public class BattleConsole {
 		int a = 0;
 		int b = 0;
 		while(isPossibleCoord == false){
+			
+			//Column
+			int A;
+			System.out.println("Please enter the column you will place the ship.");
+			boolean isColumn = false;
+			while(isColumn == false){
+				A = reader.nextInt();
+				for (int j=0; j<player.length; j++){
+					if(A == j){
+						isColumn = true;
+						a = A;
+						break;
+					}
+				}
+				if(isColumn == false){
+					System.out.println("This column does not appear on the board, please enter another.");
+				}
+			}
+			
 			//Row
 			int B;
 			System.out.println("Please enter the row you will place the ship.");	
@@ -89,23 +108,7 @@ public class BattleConsole {
 				}
 			}
 		
-			//Column
-			int A;
-			System.out.println("Please enter the column you will place the ship.");
-			boolean isColumn = false;
-			while(isColumn == false){
-				A = reader.nextInt();
-				for (int j=0; j<player.length; j++){
-					if(A == j){
-						isColumn = true;
-						a = A;
-						break;
-					}
-				}
-				if(isColumn == false){
-					System.out.println("This column does not appear on the board, please enter another.");
-				}
-			}
+			
 			isPossibleCoord = true;
 			for(int i = 0; i<shipSize; i++){
 				if(direction.equals("up")){
