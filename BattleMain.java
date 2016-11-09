@@ -74,17 +74,19 @@ public class BattleMain {
 		
 		boolean gameOver = false;
 		
+		over:
 		while(gameOver == false){
 			//Player one shoot
 			System.out.println("Player 1 fire!!!");
 			console.showBoard(true,console.getBoardPlayerTwo());
-			console.fire(console.getBoardPlayerTwo());
-			if (console.isGameEnd(console.getBoardPlayerTwo()) == true){
-				System.out.println("Player 1 wins!");
-				wait = reader.next();
-				console.showBoard(false, console.getBoardPlayerOne());
-				gameOver = true;
-				break;
+			while(console.fire(console.getBoardPlayerTwo()); == true){
+				if (console.isGameEnd(console.getBoardPlayerTwo()) == true){
+					System.out.println("Player 1 wins!");
+					wait = reader.next();
+					console.showBoard(false, console.getBoardPlayerOne());
+					gameOver = true;
+					break over;
+				}
 			}
 			//Player two shoot
 			System.out.println("Player 2 fire!!!");
