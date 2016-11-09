@@ -243,9 +243,10 @@ public class BattleConsole {
                 	}
                 	System.out.print("|  " + j + "\n");
         	}
-		for(int j=0; j<player.length;j++){
+		System.out.print(" 0 ");
+		for(int j=1; j<player.length;j++){
 			if (j < 10)
-				System.out.print(" " + j);
+				System.out.print(j + " ");
 			else
 				System.out.print(j);
 		}
