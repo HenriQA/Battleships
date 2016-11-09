@@ -79,9 +79,11 @@ public class BattleMain {
 			//Player one shoot
 			System.out.println("Player 1 fire!!!");
 			console.showBoard(true,console.getBoardPlayerTwo());
-			boolean hit = false;
-			while (hit == false){
-				hit = (console.fire(console.getBoardPlayerTwo()));
+			boolean hitp1 = true;
+			while (hitp1 == true){
+				if (hitp1 == true)
+					System.out.println("Well done! Player 1 shoot again.");
+				hitp1 = (console.fire(console.getBoardPlayerTwo()));
 				
 				if (console.isGameEnd(console.getBoardPlayerTwo()) == true){
 					System.out.println("Player 1 wins!");
@@ -92,14 +94,18 @@ public class BattleMain {
 				}
 			}
 			//Player two shoot
-			System.out.println("Player 2 fire!!!");
-			console.showBoard(true,console.getBoardPlayerOne());
-			console.fire(console.getBoardPlayerOne());
-			if (console.isGameEnd(console.getBoardPlayerOne()) == true){
-				System.out.println("Player 2 wins!");
-				wait = reader.next();
-				console.showBoard(false, console.getBoardPlayerOne());
-				gameOver = true;	
+			boolean hitp2 = true;
+			while (hitp2 == true){
+				hitp2 = (console.fire(console.getBoardPlayerOne()));
+				if (hitp2 == true)
+					System.out.println("Well done! Player 2 shoot again.");
+				if (console.isGameEnd(console.getBoardPlayerOne()) == true){
+					System.out.println("Player 2 wins!");
+					wait = reader.next();
+					console.showBoard(false, console.getBoardPlayerTwo());
+					gameOver = true;
+					break over;
+				}
 			}
 		}	
 		
