@@ -82,7 +82,7 @@ public class BattleConsole {
 			
 			//Error checking
 			for(int i=0; i<shipSize; i++)
-				if(a<0 || a >player.length() || b<0 || b>player.length()){
+				if(a<0 || a >player.length || b<0 || b>player.length){
 					System.out.println("This coordinate does not lie on the board");
 				}
 				else if(direction.equals("up")){
