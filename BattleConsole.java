@@ -90,25 +90,31 @@ public class BattleConsole {
 				if( a >= 0 && a < player.length && b <= 0 && b < player.length && b + shipSize < player.length){
 					isPossibleCoord = true;
 				}
+				else
+					break;
 			}
 			else if(direction.equals("down")){
 				if( a >= 0 && a < player.length && b <= 0 && b < player.length && b - shipSize >= 0){
 					isPossibleCoord = true;
 				}
+				else
+					break;
 			}
 			else if(direction.equals("right")){
 				if( a >= 0 && a < player.length && b <= 0 && b < player.length && a + shipSize < player.length){
 					isPossibleCoord = true;
 				}
+				else
+					break;
 			}
 			else if(direction.equals("left")){
 				if( a >= 0 && a < player.length && b <= 0 && b < player.length && a - shipSize >= 0){
 					isPossibleCoord = true;
 				}
+				else
+					break;
 			}
-			else
-				System.out.println("Here comes the error");
-				break;
+			
 		
 			for(int i = 0; i<shipSize; i++){
 				if(direction.equals("up") && player[a][b+i].getIsEmpty() == false){
