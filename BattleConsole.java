@@ -88,7 +88,7 @@ public class BattleConsole {
 				continue;
 			}
 			
-			else if(direction.equals("up") && b + shipSize > player.length){
+			else if(direction.equals("up") && b + shipSize < player.length){
 				isPossibleCoord = true;
 			}
 			else if(direction.equals("down") && b - shipSize >= 0){
