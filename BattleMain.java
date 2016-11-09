@@ -16,7 +16,7 @@ public class BattleMain {
 		int i =;
 		while(i<100){
 			stringBuild.append(" \n");
-			i++
+			i++;
 		}
 		stringBuild.append("Ship Placed Successfully! \n\n Type any character to continue (and press enter)");
 		String message = stringBuild.toString();
