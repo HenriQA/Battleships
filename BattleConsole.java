@@ -86,22 +86,22 @@ public class BattleConsole {
 					System.out.println("This coordinate does not lie on the board");
 				}
 				else if(direction.equals("up")){
-					if( a >= 0 && a < player.length() && b <= 0 && b < player.length() && b + shipSize < player.length()){
+					if( a >= 0 && a < player.length && b <= 0 && b < player.length && b + shipSize < player.length){
 						isPossibleCoord = true;
 					}
 				}
 				else if(direction.equals("down")){
-					if( a >= 0 && a < player.length() && b <= 0 && b < player.length() && b - shipSize >= 0){
+					if( a >= 0 && a < player.length && b <= 0 && b < player.length && b - shipSize >= 0){
 						isPossibleCoord = true;
 					}
 				}
 				else if(direction.equals("right")){
-					if( a >= 0 && a < player.length() && b <= 0 && b < player.length() && a + shipSize < player.length()){
+					if( a >= 0 && a < player.length && b <= 0 && b < player.length && a + shipSize < player.length){
 						isPossibleCoord = true;
 					}
 				}
 				else if(direction.equals("left")){
-					if( a >= 0 && a < player.length() && b <= 0 && b < player.length() && a - shipSize >= 0){
+					if( a >= 0 && a < player.length && b <= 0 && b < player.length && a - shipSize >= 0){
 						isPossibleCoord = true;
 					}
 				}
