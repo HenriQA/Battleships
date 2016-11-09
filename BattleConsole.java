@@ -120,6 +120,7 @@ public class BattleConsole {
 				}
 				else if (direction == "left" && player[a-i][b].getIsEmpty() == true){
 					isPossibleCoord = true;
+					System.out.println("WAaaa!");
 					break;
 				}
 			}
