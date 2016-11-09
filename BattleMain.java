@@ -15,7 +15,7 @@ public class BattleMain {
 		StringBuilder stringBuild = new StringBuilder();
 		stringBuild.append("Now it's the other players turn");
 		for(int i = 0; i<100; i++){
-			stringBuild.append(" \n ");
+			stringBuild.append("`\n");
 		}
 		stringBuild.append("Ship Placed Successfully! \n\n Type any character to continue (and press enter)");
 		String message = stringBuild.toString();
