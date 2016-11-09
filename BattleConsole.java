@@ -243,7 +243,14 @@ public class BattleConsole {
                 	}
                 	System.out.print("|  " + j + "\n");
         	}
-		System.out.println(" 0 1 2 3 4 5 6 7 8 9");
+		for(int j=0; j<player.length;j++){
+			if (j < 10)
+				System.out.print(" " + j);
+			else
+				System.out.print(j);
+		}
+		System.out.print("\n");
+			
 	}
 	public void showSquare(int c,int r, Square[][] playera){
         	if(playera[r][c].getIsHit()==true && playera[r][c].getIsEmpty()==true){
