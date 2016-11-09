@@ -111,6 +111,7 @@ public class BattleConsole {
 				if(direction.equals("up")){
 					if(b+shipSize > player.length){
 						isPossibleCoord = false;
+					}
 				   	else if(player[a][b+i].getIsEmpty() == false){
 						isPossibleCoord = false;
 					}
