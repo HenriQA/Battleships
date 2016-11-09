@@ -17,7 +17,7 @@ public class BattleMain {
 			stringBuild.append("\n");
 		}
 		stringBuild.append("Ship Placed Successfully! \n\n Type any character to continue (and press enter)");
-		String message = message.toString();
+		String message = stringBuild.toString();
 		//Place Ship 1	
 		
 		console.placeShip(2,console.getBoardPlayerOne());
