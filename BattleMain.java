@@ -1,4 +1,4 @@
-import java.util.Scanner;
+dimport java.util.Scanner;
 
 
 public class BattleMain {
@@ -16,7 +16,7 @@ public class BattleMain {
 		
 		console.placeShip(2,console.getBoardPlayerOne());
 		System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Type any character to continue (and press enter)");
-		String wait = scanner.next();
+		String wait = reader.next();
 		console.placeShip(2,console.getBoardPlayerTwo());
 		//Place Ship 2
 		console.placeShip(2,console.getBoardPlayerOne());
