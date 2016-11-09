@@ -70,7 +70,6 @@ public class BattleConsole {
 		boolean isPossibleCoord = false;
 		while(isPossibleCoord == false){
 			public void fire(Square[][] player){
-			Scanner reader = new Scanner(System.in);
 			String coord;
 			while(!reader.hasNext("[0-9],[0-9]")) {
 				System.out.println("Please enter coordinates");
