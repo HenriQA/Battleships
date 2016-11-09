@@ -129,6 +129,7 @@ public class BattleConsole {
 		for(int k=0; k<shipSize; k++){
 			if(direction == "up"){
 				player[a][b+k].setIsEmpty(false);
+				System.out.println("YAY!!!");
 			}
 			else if(direction == "down"){
 				player[a][b-k].setIsEmpty(false);
