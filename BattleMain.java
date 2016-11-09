@@ -13,10 +13,9 @@ public class BattleMain {
 		//*Do Stuff with the console*
 		Scanner reader = new Scanner(System.in);
 		StringBuilder stringBuild = new StringBuilder();
-		int i = 0;
-		while(i<100){
+		stringBuild.append("Now it's the other players turn");
+		for(int i = 0; i<100; i++){
 			stringBuild.append(" \n ");
-			i++;
 		}
 		stringBuild.append("Ship Placed Successfully! \n\n Type any character to continue (and press enter)");
 		String message = stringBuild.toString();
