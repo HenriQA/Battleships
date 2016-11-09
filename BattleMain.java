@@ -12,12 +12,12 @@ public class BattleMain {
 		
 		//*Do Stuff with the console*
 		Scanner reader = new Scanner(System.in);
-		StringBuilder stringBuild = new StringBuilder();
-		stringBuild.append("Now it's the other players turn");
+		StringBuilder sb = new StringBuilder();
+		sb.append("Now it's the other players turn");
 		for(int i = 0; i<100; i++){
-			stringBuild.append("`\n");
+			sb.append("`\n...");
 		}
-		stringBuild.append("Ship Placed Successfully! \n\n Type any character to continue (and press enter)");
+		//sb.append("Ship Placed Successfully! \n\n Type any character to continue (and press enter)");
 		String message = stringBuild.toString();
 		//Place Ship 1	
 		
