@@ -49,11 +49,12 @@ public class BattleConsole {
 		
 	Scanner reader = new Scanner(System.in);
 	//Get direction
+	String direction = "";
 	System.out.println("Please enter the direction you will place the ship ('up', 'down', 'left' or 'right').");
 	boolean isDirection = false;
 	
 	while(isDirection == false){
-		String direction = reader.next();
+		direction = reader.next();
 		if (direction.equals("up") || direction.equals("down") || direction.equals("left") || direction.equals("right")){
 			isDirection = true;
 		}
@@ -65,16 +66,19 @@ public class BattleConsole {
 		
 	// Get coordinates
 	boolean isPossibleCoord = false;
-	
+	int a = 0;
+	int b = 0;
 	while(isPossibleCoord == false){
 		//Row
+		int A;
 		System.out.println("Please enter the row you will place the ship.");	
 		boolean isRow = false;
 		while(isRow == false){
-			String a = reader.next();
-			for (j=0; j<player.length; j++){
-				if(a == j){
+			A = reader.nextInt();
+			for (int j=0; j<player.length; j++){
+				if(A == j){
 					isRow = true;
+					a = A;
 					break;
 				}
 			}
@@ -84,14 +88,15 @@ public class BattleConsole {
 		}
 		
 		//Column
-		String b;
+		int B;
 		System.out.println("Please enter the column you will place the ship.");
 		boolean isColumn = false;
 		while(isColumn == false){
-			String b = reader.next();
-			for (j=0; j<player.length; j++){
-				if(b == j){
+			B = reader.nextInt();
+			for (int j=0; j<player.length; j++){
+				if(B == j){
 					isColumn = true;
+					b = B;
 					break;
 				}
 			}
@@ -101,16 +106,16 @@ public class BattleConsole {
 		}
 		
 		for(int i = 0; i<shipSize; i++){
-			if(direction == up && player[a][b+i].getIsEmpty() == true){
+			if(direction == "up" && player[a][b+i].getIsEmpty() == true){
 				isPossibleCoord = false;
 			}
-			else if(direction == right && player[a+i][b].getIsEmpty() == true){
+			else if(direction == "right" && player[a+i][b].getIsEmpty() == true){
 				isPossibleCoord = true;
 			}
-			else if(direction == down && player[a][b-i].getIsEmpty() == true){
+			else if(direction == "down" && player[a][b-i].getIsEmpty() == true){
 				isPossibleCoord = true;
 			}
-			else if (direction == left && player[a-i][b].getIsEmpty() == true){
+			else if (direction == "left" && player[a-i][b].getIsEmpty() == true){
 				isPossibleCoord = true;
 			}
 		}
@@ -121,21 +126,21 @@ public class BattleConsole {
 	//Place the ship
 	for(int k=0; k<shipSize; k++){
 		System.out.println("Your ship has been placed successfully at " + a + "," + b + " pointing " + direction + ".\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-		if(direction == up){
+		if(direction == "up"){
 			player[a][b+k].setIsEmpty(false);
 		}
-		else if(direction == down){
+		else if(direction == "down"){
 			player[a][b-k].setIsEmpty(false);
 		}
-		else if(direction == right){
+		else if(direction == "right"){
 			player[a+k][b].setIsEmpty(false);
 		}
-		else if(direction == left){
+		else if(direction == "left"){
 			player[a][b+k].setIsEmpty(false);
 		}
 	}
-			
-}
+}			
+
 	//...
 	
 	//fire Returns NoShip if square is empty. Returns Hit! if square is not empty. 
