@@ -107,6 +107,7 @@ public class BattleConsole {
 				}
 			}
 			else
+				System.out.println("Here comes the error");
 				break;
 		
 			for(int i = 0; i<shipSize; i++){
