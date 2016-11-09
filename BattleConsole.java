@@ -106,7 +106,7 @@ public class BattleConsole {
 			else if(direction.equals("diagonalflip") && a - (shipSize-1) >= 0 && b+ (shipSize -1) < player.length){
 				isPossibleCoord = true;
 			}
-			else if(direction.equals("knight") && a + (shipSize*2-1) >= player.length && b + (shipSize -1) < player.length){
+			else if(direction.equals("knight") && a + 2*(shipSize)-1 < player.length && b + (shipSize -1) < player.length){
 				isPossibleCoord = true;
 			}
 			else{
