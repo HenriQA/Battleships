@@ -13,8 +13,10 @@ public class BattleMain {
 		//*Do Stuff with the console*
 		Scanner reader = new Scanner(System.in);
 		StringBuilder stringBuild = new StringBuilder();
-		for(int i=1; i<100; i++){
+		int i =;
+		while(i<100){
 			stringBuild.append(" \n");
+			i++
 		}
 		stringBuild.append("Ship Placed Successfully! \n\n Type any character to continue (and press enter)");
 		String message = stringBuild.toString();
