@@ -104,24 +104,19 @@ public class BattleConsole {
 					System.out.println("This column does not appear on the board, please enter another.");
 				}
 			}
-		
+			isPossibleCoord = true;
 			for(int i = 0; i<shipSize; i++){
-				if(direction == "up" && player[a][b+i].getIsEmpty() == true){
-					isPossibleCoord = true;
-					break;
+				if(direction == "up" && player[a][b+i].getIsEmpty() == false){
+					isPossibleCoord = false;
 				}
-				else if(direction == "right" && player[a+i][b].getIsEmpty() == true){
-					isPossibleCoord = true;
-					break;
+				else if(direction == "right" && player[a+i][b].getIsEmpty() == false){
+					isPossibleCoord = false;
 				}
-				else if(direction == "down" && player[a][b-i].getIsEmpty() == true){
-					isPossibleCoord = true;
-					break;
+				else if(direction == "down" && player[a][b-i].getIsEmpty() == false){
+					isPossibleCoord = false;
 				}
-				else if (direction == "left" && player[a-i][b].getIsEmpty() == true){
-					isPossibleCoord = true;
-					System.out.println("WAaaa!");
-					break;
+				else if (direction == "left" && player[a-i][b].getIsEmpty() == false){
+					isPossibleCoord = false;
 				}
 			}
 			if(isPossibleCoord == false){
