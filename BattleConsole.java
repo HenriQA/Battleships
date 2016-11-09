@@ -68,6 +68,8 @@ public class BattleConsole {
 		
 			// Get coordinates
 		boolean isPossibleCoord = false;
+		int a = 0;
+		int b = 0;
 		while(isPossibleCoord == false){
 			String coord;
 			while(!reader.hasNext("[0-9],[0-9]")) {
@@ -76,8 +78,8 @@ public class BattleConsole {
 			}
 			coord = reader.next();
 			List<String> coordSplit = Arrays.asList(coord.split(","));
-			int a = Integer.parseInt(coordSplit.get(0));
-			int b = Integer.parseInt(coordSplit.get(1));			
+			a = Integer.parseInt(coordSplit.get(0));
+			b = Integer.parseInt(coordSplit.get(1));			
 			
 			//Error checking
 			for(int i=0; i<shipSize; i++){
