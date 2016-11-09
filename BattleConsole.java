@@ -55,7 +55,7 @@ public class BattleConsole {
 	
 		while(isDirection == false){
 			String localDirection = reader.next();
-			if (localDirection.equals("up") || localDirection.equals("down") || localDirection.equals("left") || localDirection.equals("right")){
+			if (localDirection.equals("up") || localDirection.equals("down") || localDirection.equals("left") || localDirection.equals("right") || localDirection.equals("diagonal")){
 				direction = localDirection;
 				isDirection = true;
 				break;
@@ -97,7 +97,10 @@ public class BattleConsole {
 			else if(direction.equals("right") && a + (shipSize-1) < player.length){
 				isPossibleCoord = true;
 			}
-			else if(direction.equals("left") && a - (shipSize-1) >= -1){
+			else if(direction.equals("left") && a - (shipSize-1) >= 0){
+				isPossibleCoord = true;
+			}
+			else if(direction.equals("diagonal") && a + (shipSize-1) < player.length && b+ (shipSize -1) < player.length){
 				isPossibleCoord = true;
 			}
 			else{
@@ -116,6 +119,9 @@ public class BattleConsole {
 					isPossibleCoord = false;
 				}
 				else if (direction.equals("left") && player[a-i][b].getIsEmpty() == false){
+					isPossibleCoord = false;
+				}
+				else if (direction.equals("diagonal") && player[a+i][b+i].getIsEmpty() == false){
 					isPossibleCoord = false;
 				}
 			}
@@ -138,6 +144,9 @@ public class BattleConsole {
 			}
 			else if(direction.equals("left")){
 				player[a-k][b].setIsEmpty(false);
+			}
+			else if(direction.equals("diagonal")){
+				player[a+k][b+k].setIsEmpty(false);
 			}
 		}
 	}
