@@ -14,10 +14,10 @@ public class BattleMain {
 		
 		//Place Ship 1	
 		console.placeShip(2,console.getBoardPlayerOne());
-		console.placeShip(2,console.getBoardPlayerTwo());
+		//console.placeShip(2,console.getBoardPlayerTwo());
 		//Place Ship 2
 		console.placeShip(2,console.getBoardPlayerOne());
-		console.placeShip(2,console.getBoardPlayerTwo());
+		//console.placeShip(2,console.getBoardPlayerTwo());
 		//Place Ship 3
 		console.placeShip(3,console.getBoardPlayerOne());
 		console.placeShip(3,console.getBoardPlayerTwo());
