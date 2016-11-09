@@ -40,11 +40,11 @@ public class BattleConsole {
 		//Take reade input to place the ship on the board
 		if(player == boardPlayerOne){
 			showBoard(false,getBoardPlayerOne());
-			System.out.println("Player 1, where would you like to place your ship (of size " + shipSize + ") on the board.");
+			System.out.println("\nPlayer 1, where would you like to place your ship (of size " + shipSize + ") on the board?");
 		}
 		else {
 			showBoard(false,getBoardPlayerTwo());
-			System.out.println("Player 2, where would you like to place your ship (of size " + shipSize + ") on the board.");
+			System.out.println("\nPlayer 2, where would you like to place your ship (of size " + shipSize + ") on the board?");
 		}
 		
 		Scanner reader = new Scanner(System.in);
@@ -72,7 +72,7 @@ public class BattleConsole {
 		int b = 0;
 		while(isPossibleCoord == false){
 			String coord;
-			System.out.println("Please enter the coordinates you'd like your ship to be placed");
+			System.out.println("Please enter the coordinates you'd like your ship to be placed (x,y)");
 			while(!reader.hasNext("\\d+,\\d+")) {
 				System.out.println("Please enter coordinates");
     				reader.next(); 
@@ -84,7 +84,7 @@ public class BattleConsole {
 			
 			//Error checking
 			if(a<0 || a >player.length || b<0 || b>player.length){
-				System.out.println("This coordinate does not lie on the board");
+				System.out.println("Thease coordinates lie outside the board. Please choose others.");
 				continue;
 			}
 			
@@ -177,9 +177,10 @@ public class BattleConsole {
 	public boolean fire(Square[][] player){
 		Scanner reader = new Scanner(System.in);
 		String coord;
+		System.out.println("Choose coordinates to fire upon (x,y)");
 		while(true){
 			while(!reader.hasNext("\\d+,\\d+")) {
-				System.out.println("These are not in the valid format");
+				System.out.println("Please enter coordinates");
     				reader.next(); 
 			}
 			coord = reader.next();
