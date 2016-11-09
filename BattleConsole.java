@@ -83,10 +83,12 @@ public class BattleConsole {
 			b = Integer.parseInt(coordSplit.get(1));			
 			
 			//Error checking
-			//if(a<0 || a >player.length || b<0 || b>player.length){
-				//System.out.println("This coordinate does not lie on the board");
-			//}
-			if(direction.equals("up") && b + shipSize < player.length){
+			if(a<0 || a >player.length || b<0 || b>player.length){
+				System.out.println("This coordinate does not lie on the board");
+				continue;
+			}
+			
+			else if(direction.equals("up") && b + shipSize > player.length){
 				isPossibleCoord = true;
 			}
 			else if(direction.equals("down") && b - shipSize >= 0){
@@ -99,9 +101,9 @@ public class BattleConsole {
 				isPossibleCoord = true;
 			}
 			else{
+				System.out.println("The ship will not fit if it's placed here, please choose somewhere else");
 				continue;
 			}
-			
 		
 			for(int i = 0; i<shipSize; i++){
 				if(direction.equals("up") && player[a][b+i].getIsEmpty() == false){
