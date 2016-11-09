@@ -16,6 +16,7 @@ public class BattleMain {
 		for(int i = 0; i < 100; i++){
 			sb.append("\n");
 		}
+		String gap = sb.toString();
 		sb.append("Ship Placed Successfully! \n\n Type any character to continue (and press enter)");
 		String message = sb.toString();
 		//Place Ship 1	
@@ -66,7 +67,7 @@ public class BattleMain {
 		System.out.println(message);
 		wait = reader.next();
 		console.placeShip(5,console.getBoardPlayerTwo());
-		System.out.println(message);
+		System.out.println(gap);
 		
 		//FIRE
 		System.out.println("All ships placed. Now FIRE!!!");
