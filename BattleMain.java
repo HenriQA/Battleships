@@ -28,7 +28,7 @@ public class BattleMain {
 		System.out.println(message);
 		wait = reader.next();
 		//Place Ship 2
-		console.placeShip(2,console.getBoardPlayerOne());
+	/**	console.placeShip(2,console.getBoardPlayerOne());
 		System.out.println(message);
 		wait = reader.next();
 		console.placeShip(2,console.getBoardPlayerTwo());
@@ -69,7 +69,7 @@ public class BattleMain {
 		console.placeShip(5,console.getBoardPlayerTwo());
 		System.out.println(gap);
 		
-		//FIRE
+	**/	//FIRE
 		System.out.println("All ships placed. Now FIRE!!!");
 		
 		boolean gameOver = false;
@@ -79,15 +79,19 @@ public class BattleMain {
 			//Player one shoot
 			System.out.println("Player 1 fire!!!");
 			console.showBoard(true,console.getBoardPlayerTwo());
-			while(console.fire(console.getBoardPlayerTwo()) == true){
-				if (console.isGameEnd(console.getBoardPlayerTwo()) == true){
-					System.out.println("Player 1 wins!");
-					wait = reader.next();
-					console.showBoard(false, console.getBoardPlayerOne());
-					gameOver = true;
-					break over;
-				}
+			int cont;
+			if (console.fire(console.getBoardPlayerTwo()) == true){
+				cont = 5;
 			}
+			else
+				cont = 3;
+			//if (console.isGameEnd(console.getBoardPlayerTwo()) == true){
+				//System.out.println("Player 1 wins!");
+				//wait = reader.next();
+				//console.showBoard(false, console.getBoardPlayerOne());
+				//gameOver = true;
+				//break over;
+			//}
 			//Player two shoot
 			System.out.println("Player 2 fire!!!");
 			console.showBoard(true,console.getBoardPlayerOne());
