@@ -14,7 +14,7 @@ public class BattleMain {
 		Scanner reader = new Scanner(System.in);
 		StringBuilder stringBuild = new StringBuilder();
 		for(int i=1; i<100; i++){
-			stringBuild.append("\n");
+			stringBuild.append("\n\n");
 		}
 		stringBuild.append("Ship Placed Successfully! \n\n Type any character to continue (and press enter)");
 		String message = stringBuild.toString();
