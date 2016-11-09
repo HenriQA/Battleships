@@ -159,10 +159,9 @@ public class BattleConsole {
 	//firing method
 	public void fire(Square[][] player){
 		Scanner reader = new Scanner(System.in);
-		
 		Pattern c = Pattern.compile("a*b");
 		String coord;
-		while (!reader.hasNext(Pattern c)) {
+		while(!reader.hasNext(c)) {
 			System.out.println("These are not in the valid format");
     			reader.next(); 
 		}
