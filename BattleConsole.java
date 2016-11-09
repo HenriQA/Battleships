@@ -55,7 +55,7 @@ public class BattleConsole {
 	
 		while(isDirection == false){
 			String localDirection = reader.next();
-			if (localDirection.equals("up") || localDirection.equals("down") || localDirection.equals("left") || localDirection.equals("right") || localDirection.equals("diagonal")){
+			if (localDirection.equals("up") || localDirection.equals("down") || localDirection.equals("left") || localDirection.equals("right") || localDirection.equals("diagonal") || localDirection.equals("diagonalflip") || localDirection.equals("knight")){
 				direction = localDirection;
 				isDirection = true;
 				break;
@@ -103,6 +103,12 @@ public class BattleConsole {
 			else if(direction.equals("diagonal") && a + (shipSize-1) < player.length && b+ (shipSize -1) < player.length){
 				isPossibleCoord = true;
 			}
+			else if(direction.equals("diagonalflip") && a - (shipSize-1) >= 0 && b+ (shipSize -1) < player.length){
+				isPossibleCoord = true;
+			}
+			else if(direction.equals("knight") && a + (shipSize*2-1) >= player.length && b + (shipSize -1) < player.length){
+				isPossibleCoord = true;
+			}
 			else{
 				System.out.println("The ship will not fit if it's placed here, please choose somewhere else");
 				continue;
@@ -122,6 +128,12 @@ public class BattleConsole {
 					isPossibleCoord = false;
 				}
 				else if (direction.equals("diagonal") && player[a+i][b+i].getIsEmpty() == false){
+					isPossibleCoord = false;
+				}
+				else if (direction.equals("diagonalflip") && player[a-i][b+i].getIsEmpty() == false){
+					isPossibleCoord = false;
+				}
+				else if (direction.equals("knight") && player[a+2*i][b+i].getIsEmpty() == false){
 					isPossibleCoord = false;
 				}
 			}
@@ -147,6 +159,12 @@ public class BattleConsole {
 			}
 			else if(direction.equals("diagonal")){
 				player[a+k][b+k].setIsEmpty(false);
+			}
+			else if(direction.equals("diagonalflip")){
+				player[a-k][b+k].setIsEmpty(false);
+			}
+			else if(direction.equals("knight")){
+				player[a+2*k][b+k].setIsEmpty(false);
 			}
 		}
 	}
