@@ -49,7 +49,7 @@ public class BattleConsole {
 		
 		Scanner reader = new Scanner(System.in);
 		//Get direction
-		String direction;
+		String direction = "";
 		System.out.println("Please enter the direction you will place the ship ('up', 'down', 'left' or 'right').");
 		boolean isDirection = false;
 	
@@ -108,16 +108,16 @@ public class BattleConsole {
 			}
 			isPossibleCoord = true;
 			for(int i = 0; i<shipSize; i++){
-				if(direction == "up" && player[a][b+i].getIsEmpty() == false){
+				if(direction.equals("up") && player[a][b+i].getIsEmpty() == false){
 					isPossibleCoord = false;
 				}
-				else if(direction == "right" && player[a+i][b].getIsEmpty() == false){
+				else if(direction.equals("right") && player[a+i][b].getIsEmpty() == false){
 					isPossibleCoord = false;
 				}
-				else if(direction == "down" && player[a][b-i].getIsEmpty() == false){
+				else if(direction.equals("down") && player[a][b-i].getIsEmpty() == false){
 					isPossibleCoord = false;
 				}
-				else if (direction == "left" && player[a-i][b].getIsEmpty() == false){
+				else if (direction.equals("left") && player[a-i][b].getIsEmpty() == false){
 					isPossibleCoord = false;
 				}
 			}
@@ -127,18 +127,18 @@ public class BattleConsole {
 		} 	
 		//Place the ship
 		
-		System.out.println("Your ship has been placed successfully at " + a + "," + b + " pointing " + direction + ".\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+		System.out.println("Your ship has been placed successfully at " + a + "," + b + " pointing " + direction + ".");
 		for(int k=0; k<shipSize; k++){
-			if(direction == "up"){
+			if(direction.equals("up")){
 				player[a][b+k].setIsEmpty(false);
 			}
-			else if(direction == "down"){
+			else if(direction.equals("down")){
 				player[a][b-k].setIsEmpty(false);
 			}
-			else if(direction == "right"){
+			else if(direction.equals("right")){
 				player[a+k][b].setIsEmpty(false);
 			}
-			else if(direction == "left"){
+			else if(direction.equals("left")){
 				player[a][b+k].setIsEmpty(false);
 			}
 		}
