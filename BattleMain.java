@@ -75,7 +75,7 @@ public class BattleMain {
 			if (console.isGameEnd(console.getBoardPlayerTwo()) == true){
 				System.out.println("Player 1 wins!");
 				wait = reader.next();
-				console.showBoard(console.player.length, false, console.getBoardPlayerOne());
+				console.showBoard(false, console.getBoardPlayerOne());
 				gameOver = true;
 				break;
 			}
