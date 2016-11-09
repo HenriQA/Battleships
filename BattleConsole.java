@@ -229,12 +229,12 @@ public class BattleConsole {
 	}
 
 	//Methods for printing board
-	public void showBoard(int boardSize, Boolean isGame, Square[][] player){
-        	for (int i=0; i<boardSize;i++){
+	public void showBoard(Boolean isGame, Square[][] player){
+        	for (int i=0; i<player.length;i++){
                 	System.out.print(" _");
         	}
         	System.out.print("\n");
-        	for(int j=boardSize-1; j>=0; j--){
+        	for(int j=player.length-1; j>=0; j--){
 			for(int k=0; k<boardSize;k++) {
                         	if (isGame == true)
                                 	showSquare(j,k,player);
