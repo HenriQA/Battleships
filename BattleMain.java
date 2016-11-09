@@ -28,7 +28,7 @@ public class BattleMain {
 		System.out.println(message);
 		wait = reader.next();
 		//Place Ship 2
-	/**	console.placeShip(2,console.getBoardPlayerOne());
+		console.placeShip(2,console.getBoardPlayerOne());
 		System.out.println(message);
 		wait = reader.next();
 		console.placeShip(2,console.getBoardPlayerTwo());
@@ -69,7 +69,7 @@ public class BattleMain {
 		console.placeShip(5,console.getBoardPlayerTwo());
 		System.out.println(gap);
 		
-	**/	//FIRE
+		//FIRE
 		System.out.println("All ships placed. Now FIRE!!!");
 		
 		boolean gameOver = false;
