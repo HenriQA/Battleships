@@ -66,45 +66,45 @@ public class BattleConsole {
 			}
 		} 
 		
-		// Get coordinates
+			// Get coordinates
 		boolean isPossibleCoord = false;
-		int a = 0;
-		int b = 0;
 		while(isPossibleCoord == false){
-			
-			//Column
-			int A;
-			System.out.println("Please enter the column you will place the ship.");
-			boolean isColumn = false;
-			while(isColumn == false){
-				A = reader.nextInt();
-				for (int j=0; j<player.length; j++){
-					if(A == j){
-						isColumn = true;
-						a = A;
-						break;
-					}
-				}
-				if(isColumn == false){
-					System.out.println("This column does not appear on the board, please enter another.");
-				}
+			public void fire(Square[][] player){
+			Scanner reader = new Scanner(System.in);
+			String coord;
+			while(!reader.hasNext("[0-9],[0-9]")) {
+				System.out.println("Please enter coordinates");
+    				reader.next(); 
 			}
+			coord = reader.next();
+			List<String> coordSplit = Arrays.asList(coord.split(","));
+			int a = Integer.parseInt(coordSplit.get(0));
+			int b = Integer.parseInt(coordSplit.get(1));			
 			
-			//Row
-			int B;
-			System.out.println("Please enter the row you will place the ship.");	
-			boolean isRow = false;
-			while(isRow == false){
-				B = reader.nextInt();
-				for (int j=0; j<player.length; j++){
-					if(B == j){
-						isRow = true;
-						b = B;
-						break;
+			//Error checking
+			for(int i=0; i<shipSize; i++)
+				if(a<0 || a >player.length() || b<0 || b>player.length()){
+					System.out.println("This coordinate does not lie on the board");
+				}
+				else if(direction.equals("up")){
+					if( a >= 0 && a < player.length() && b <= 0 && b < player.length() && b + shipSize < player.length()){
+						isPossibleCoord = true;
 					}
 				}
-				if(isRow == false){
-					System.out.println("This row does not appear on the board, please enter another.");
+				else if(direction.equals("down")){
+					if( a >= 0 && a < player.length() && b <= 0 && b < player.length() && b - shipSize >= 0){
+						isPossibleCoord = true;
+					}
+				}
+				else if(direction.equals("right")){
+					if( a >= 0 && a < player.length() && b <= 0 && b < player.length() && a + shipSize < player.length()){
+						isPossibleCoord = true;
+					}
+				}
+				else if(direction.equals("left")){
+					if( a >= 0 && a < player.length() && b <= 0 && b < player.length() && a - shipSize >= 0){
+						isPossibleCoord = true;
+					}
 				}
 			}
 		
