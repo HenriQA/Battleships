@@ -72,15 +72,15 @@ public class BattleConsole {
 		int b = 0;
 		while(isPossibleCoord == false){
 			//Row
-			int A;
+			int B;
 			System.out.println("Please enter the row you will place the ship.");	
 			boolean isRow = false;
 			while(isRow == false){
-				A = reader.nextInt();
+				B = reader.nextInt();
 				for (int j=0; j<player.length; j++){
-					if(A == j){
+					if(B == j){
 						isRow = true;
-						a = A;
+						b = B;
 						break;
 					}
 				}
@@ -90,15 +90,15 @@ public class BattleConsole {
 			}
 		
 			//Column
-			int B;
+			int A;
 			System.out.println("Please enter the column you will place the ship.");
 			boolean isColumn = false;
 			while(isColumn == false){
-				B = reader.nextInt();
+				A = reader.nextInt();
 				for (int j=0; j<player.length; j++){
-					if(B == j){
+					if(A == j){
 						isColumn = true;
-						b = B;
+						a = A;
 						break;
 					}
 				}
