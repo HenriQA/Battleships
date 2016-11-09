@@ -12,7 +12,7 @@ public class BattleMain {
 		
 		//*Do Stuff with the console*
 		
-		//Place Ship 1	
+/**		//Place Ship 1	
 		console.placeShip(2,console.getBoardPlayerOne());
 		console.placeShip(2,console.getBoardPlayerTwo());
 		//Place Ship 2
@@ -30,7 +30,7 @@ public class BattleMain {
 		//Place Ship 6
 		console.placeShip(4,console.getBoardPlayerOne());
 		console.placeShip(4,console.getBoardPlayerTwo());
-		//Place Ship 7
+	**/	//Place Ship 7
 		console.placeShip(5,console.getBoardPlayerOne());
 		console.placeShip(5,console.getBoardPlayerTwo());
 		
