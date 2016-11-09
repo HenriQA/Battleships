@@ -73,7 +73,7 @@ public class BattleConsole {
 		while(isPossibleCoord == false){
 			String coord;
 			System.out.println("Please enter the coordinates you'd like your ship to be placed");
-			while(!reader.hasNext("[0-9],[0-9]")) {
+			while(!reader.hasNext("\\d+,\\d+")) {
 				System.out.println("Please enter coordinates");
     				reader.next(); 
 			}
@@ -177,7 +177,7 @@ public class BattleConsole {
 	public void fire(Square[][] player){
 		Scanner reader = new Scanner(System.in);
 		String coord;
-		while(!reader.hasNext("[0-9],[0-9]")) {
+		while(!reader.hasNext("\\d+,\\d+")) {
 			System.out.println("These are not in the valid format");
     			reader.next(); 
 		}
