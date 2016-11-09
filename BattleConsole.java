@@ -122,7 +122,7 @@ public class BattleConsole {
 		if(isPossibleCoord == false){
 			System.out.println("The ship cannot be placed here, it will overlap with another");
 		}
-	} 		
+	} 	
 	//Place the ship
 	for(int k=0; k<shipSize; k++){
 		System.out.println("Your ship has been placed successfully at " + a + "," + b + " pointing " + direction + ".\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
@@ -139,7 +139,6 @@ public class BattleConsole {
 			player[a][b+k].setIsEmpty(false);
 		}
 	}
-}			
 
 	//...
 	
