@@ -103,7 +103,8 @@ public class BattleMain {
 			while (hitp1 == true){
 				hitp1 = (console.fire(console.getBoardPlayerTwo()));
 				if (hitp1 == true)
-					System.out.println("Well done! Player 1 shoot again.");
+					System.out.println("\nWell done! Player 1 shoot again.");
+					console.showBoard(true,console.getBoardPlayerTwo());
 				if (console.isGameEnd(console.getBoardPlayerTwo()) == true){
 					System.out.println("Player 1 wins!");
 					wait = reader.next();
@@ -120,7 +121,8 @@ public class BattleMain {
 			while (hitp2 == true){
 				hitp2 = (console.fire(console.getBoardPlayerOne()));
 				if (hitp2 == true)
-					System.out.println("Well done! Player 2 shoot again.");
+					System.out.println("\nWell done! Player 2 shoot again.");
+					console.showBoard(true,console.getBoardPlayerOne());
 				if (console.isGameEnd(console.getBoardPlayerOne()) == true){
 					System.out.println("Player 2 wins!");
 					wait = reader.next();
