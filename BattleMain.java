@@ -97,7 +97,7 @@ public class BattleMain {
 		while(gameOver == false){
 			//Player one shoot
 			
-			System.out.println("Player 1 fire!!!");
+			System.out.println("\n\n\nPlayer 1 fire!!!");
 			console.showBoard(true,console.getBoardPlayerTwo());
 			boolean hitp1 = true;
 			while (hitp1 == true){
@@ -115,7 +115,7 @@ public class BattleMain {
 			}
 			//Player two shoot
 			
-			System.out.println("Player 2 fire!!!");
+			System.out.println("\n\n\nPlayer 2 fire!!!");
 			console.showBoard(true,console.getBoardPlayerOne());
 			boolean hitp2 = true;
 			while (hitp2 == true){
