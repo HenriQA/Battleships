@@ -73,7 +73,7 @@ public class BattleConsole {
 		while(isPossibleCoord == false){
 			String coord;
 			System.out.println("Please enter the coordinates you'd like your ship to be placed (x,y)");
-			while(!reader.hasNext("[0-9],[0,9]")) {
+			while(!reader.hasNext("[0-9],[0-9]")) {
 				System.out.println("Please enter coordinates");
     				reader.next(); 
 			}
@@ -179,7 +179,7 @@ public class BattleConsole {
 		String coord;
 		System.out.println("Choose coordinates to fire upon (x,y)");
 		while(true){
-			while(!reader.hasNext("[0,9],[0,9]")) {
+			while(!reader.hasNext("[0-9],[0-9]")) {
 				System.out.println("Please enter coordinates");
     				reader.next(); 
 			}
