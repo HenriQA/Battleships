@@ -5,7 +5,6 @@ public class BattleMain {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to BATTLESHIPS! \n");
-		dajhhgsd
 		
 		//Create Console
 		BattleConsole console = new BattleConsole("Console v.01");
