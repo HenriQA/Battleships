@@ -1,4 +1,3 @@
-iygtewsagr
 public class Square {
 
 	
